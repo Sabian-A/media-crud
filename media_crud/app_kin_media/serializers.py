@@ -43,7 +43,7 @@ class ArtistSerializer(serializers.ModelSerializer):
     
 #####################################################################################
 
-    def update(self, instance, validated_data):
+    """def update(self, instance, validated_data):
         albums_data = validated_data.pop('albums')
         orders = instance.albums.all()
         orders = list(orders)
@@ -65,4 +65,4 @@ class ArtistSerializer(serializers.ModelSerializer):
             order.destination = request_order_data.get('destination', order.destination)
             order.order_ref = request_order_data.get('order_ref', order.order_ref)
             order.save()
-        return instance
+        return instance"""
